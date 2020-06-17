@@ -1,16 +1,24 @@
 const Cinema = function (films) {
   this.films = films;
 
-  this.filmTitles = function (films) {
-    return this.films.map(film => film.title)
+  this.filmTitles = function () {
+    return films.map(film => film.title)
   }
 
 
   this.findByTitle = function (filmTitle) {
-    return this.films.find(film => {
+    return films.find(film => {
       return film.title === filmTitle
     })
   }
+
+
+  this.filterByGenre = function (genre) {
+    return films.filter(film => {
+      return film.genre == genre
+    })
+  }
+
 }
 
 module.exports = Cinema;
