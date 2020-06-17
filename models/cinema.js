@@ -29,6 +29,13 @@ const Cinema = function (films) {
     return films.every(film => film.length > mins);
   }
 
+  this.totalRuntime = function () {
+    const total = films.reduce((runningTotal, film) => {
+      return runningTotal + film.length
+    }, 0)
+    return total
+  }
+
 }
 
 module.exports = Cinema;
