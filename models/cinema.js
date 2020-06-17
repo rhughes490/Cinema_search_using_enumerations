@@ -19,6 +19,12 @@ const Cinema = function (films) {
     })
   }
 
+  this.filterByYear = function (year) {
+    return films.filter(film => {
+      return film.year == year
+    })
+  }
+
 }
 
 module.exports = Cinema;
