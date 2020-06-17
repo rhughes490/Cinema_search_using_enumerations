@@ -25,6 +25,10 @@ const Cinema = function (films) {
     })
   }
 
+  this.allFilmsOver = function (mins) {
+    return films.every(film => film.length > mins);
+  }
+
 }
 
 module.exports = Cinema;
