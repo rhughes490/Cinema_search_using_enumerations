@@ -25,6 +25,10 @@ const Cinema = function (films) {
     })
   }
 
+  this.anyFilmsByYear = function (year) {
+    return (this.filterByYear(year) === []);
+  }
+
   this.allFilmsOver = function (mins) {
     return films.every(film => film.length > mins);
   }
@@ -34,6 +38,12 @@ const Cinema = function (films) {
       return runningTotal + film.length
     }, 0)
     return total
+  }
+
+  this.filterByProperty = function (property, value) {
+    return films.filter(film => {
+      return film[property] === value;
+    })
   }
 
 }
