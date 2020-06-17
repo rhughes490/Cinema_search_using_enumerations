@@ -6,6 +6,11 @@ const Cinema = function (films) {
   }
 
 
+  this.findByTitle = function (filmTitle) {
+    return this.films.find(film => {
+      return film.title === filmTitle
+    })
+  }
 }
 
 module.exports = Cinema;
